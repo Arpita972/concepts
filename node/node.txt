@@ -1,0 +1,30 @@
+When functions can be treated like any other variable then those functions are first-class functions. 
+Higher-order functions are functions that take other functions as arguments (callbacks) or return functions as their results. Higher-order functions include:
+•	Map
+•	Sort
+•	filter
+What is Node.js?
+Node JS is a server-side scripting mainly written on Google v8 engine it is widely used for web application for file reading writing and calling rest APIs.
+Why use Google v8?
+Node use Google v8 is chrome runtime engine which convert JavaScript code into native machine code so it provides a fast running application.    
+How it works?
+•	Clients Send request to Web Server.
+•	Node JS Web Server receives those requests and places them into a Queue. It is known as “Event Queue”.
+•	Node JS Web Server internally has a Component, known as “Event Loop
+•	Event Loop uses Single Thread only
+•	Event Loop checks any Client Request is placed in Event Queue. If no, then wait for incoming requests for indefinitely.
+•	If yes, then pick up one Client Request from Event Queue
+•	Starts process that Client Request
+•	If that Client Request Does Not requires any Blocking IO Operations, then process everything, prepare response and send it back to client.
+•	If that Client Request requires some Blocking IO Operations like interacting with Database, File System, External Services then it will follow different approach
+	Checks Threads availability from Internal Thread Pool
+	Picks up one Thread and assign this Client Request to that thread.
+	That Thread is responsible for taking that request, process it, perform Blocking IO operations, prepare response and send it back to the Event Loop
+	Event Loop in turn, sends that Response to the respective Client.
+
+
+ REPL:
+•	Read: It reads the inputs from users and parses it into JavaScript data structure. It is then stored to memory.
+•	Eval: The parsed JavaScript data structure is evaluated for the results.
+•	Print: The result is printed after the evaluation.
+•	Loop: Loops the input command. To come out of NODE REPL
